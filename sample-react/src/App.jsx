@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import React from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Login from "./components/login"
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+const App=()=>{
+  const nav="Sign-Up"
+    return (
+        <>
+        <div className="h-screen w-screen flex  flex-col justify-center items-center bg-zinc-300">
+         
+          <div className="h-4/6 w-2/6  bg-gray-500  rounded-md flex flex-col justify-center items-center gap-4">
+          <Login login={nav} />
+         
+          <input type="text" placeholder="NAME"  required className="h-8 w-3/6  hover:border-b-4 hover:border-b-gray-700 rounded-sm"/>
+          <input type="number" placeholder="AGE" className="h-8 w-3/6 hover:border-b-4 hover:border-b-gray-700 rounded-sm"/>
+          <input type="email" placeholder="Email" className="h-8 w-3/6 hover:border-b-4  hover:border-b-gray-700 rounded-sm "/>
+          <input type="password" placeholder="Password" className="h-8 w-3/6 hover:border-b-4  hover:border-b-gray-700 rounded-sm "/>
+           <button className= " w-1/5 block bg-gray-700  text-white p-2 rounded-md hover:bg-gray-600" >Sign-up </button>
+          </div>
+        </div>
+        </>
+      )
+    
 }
-
 export default App
