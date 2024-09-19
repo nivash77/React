@@ -3,7 +3,7 @@ const Img=()=>{
     return(
         <>
         <div className="flex flex-row justify-center gap-[9rem]">
-        <div className="flex h-[24rem] w-[24rem]   justify-items-start">
+        <div className="flex h-[24rem] w-[24rem]   justify-items-start pt-7">
           <img src="src\assets\img\WhatsApp Image 2024-09-11 at 6.02.08 PM.jpeg" className="rounded-[60%]"></img>  
         </div>
         <div className="flex flex-col justify-center  gap-[1rem] w-[20vw] h-[24rem] mt-0 ">

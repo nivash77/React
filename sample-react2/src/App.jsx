@@ -12,8 +12,8 @@ const App=()=>{
    <BrowserRouter>
    <Routes>
    <Route path="/" element={<Profile />} />
-
    <Route path="/Project" element={<Project />} />
+
    <Route path="/Contact" element={<Contact/>} />
    </Routes>
    </BrowserRouter>

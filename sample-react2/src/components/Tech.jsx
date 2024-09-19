@@ -3,7 +3,7 @@ import { faReact, faGithub, faJava, faJs } from "@fortawesome/free-brands-svg-ic
  const Tech=()=>{
     return(
         <>
-        <div className='flex flex-row  justify-center items-center  gap-11 pb-[10px]'>
+        <div className=' flex flex-row  justify-center items-start  gap-11 '>
         <div > <FontAwesomeIcon icon={faReact} className='size-14' /></div>
         <div><FontAwesomeIcon icon={faGithub}  className='size-14'/></div>
         <FontAwesomeIcon icon={faJava}  className='size-14'/>
