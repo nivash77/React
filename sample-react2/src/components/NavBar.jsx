@@ -20,15 +20,15 @@ const Nav=()=>{
 }
 ]
 const mail=useRef(null)
-const pass=useRef(null)
+const name=useRef(null)
 const handleLogin=(e)=>{
   e.preventDefault()
-  console.log(mail.current.value,pass.current.value)
+  console.log(mail.current.value,name.current.value)
 }
 const [visi,setvisi]=useState(false)
     return(
         <>
-        <div className='flex justify-center pt-3'>
+        <div className='flex justify-center pt-3 sticky top-0'>
         <div className=" bg-gray-600 list-none flex   flex-row items-center gap-[3rem] h-[3rem] w-[100vw] rounded-md shadow-md shadow-gray-700">
             <div className=" flex text-center w-[30%] justify-end">
               <h1 className="text-gray-100 text-2xl">Nivash</h1>
@@ -66,11 +66,11 @@ const [visi,setvisi]=useState(false)
                         </div>
                     </div>
                     <div className="w-full h-[85%] flex flex-row justify-center items-center">
-                        <form className="w-[80%] h-[80%] flex flex-col justify-center items-center gap-4" onSubmit={handleLogin}>
+                        <form className="w-[80%] h-[80%] flex flex-col justify-center items-center gap-4" onSubmit={handleLogin} onBlur={setvisi(!visi)}>
+                            <input type="text" ref={name} name="" id="name" placeholder="Name" className="p-3 bg-[#b2b2b2] w-full font-bold outline-none active:outline-none focus:border-b-4 hover:border-gray-500" required />
                             <input type="email" ref={mail} name="" id="email" placeholder="email" className="p-3 bg-[#b2b2b2] w-full font-bold outline-none active:outline-none focus:border-b-4 hover:border-gray-500" required />
-                            <input type="text" ref={pass} name="" id="name" placeholder="Name" className="p-3 bg-[#b2b2b2] w-full font-bold outline-none active:outline-none focus:border-b-4 hover:border-gray-500" required />
 
-                            <button type="submit" className="bg-green-400 p-3 text-black w-full h-[3rem] rounded-sm text-lg font-bold hover:bg-green-300" onClick={()=>setvisi(!visi)}>Login</button>
+                            <button type="submit" className="bg-green-400 p-3 text-black w-full h-[3rem] rounded-sm text-lg font-bold hover:bg-green-300" >Login</button>
                         </form>
                     </div>
                     
