@@ -1,8 +1,8 @@
 export const Myproject=()=>{
     return(
         <>
-         <div className="flex flex-row gap-[3rem] w-">
-        <div className="flex flex-col justify-center  w-[20rem] h-[30rem] relative left-[15rem] top-[2rem] ">
+         <div className="flex flex-row gap-[3rem] justify-center">
+        <div className="flex flex-col justify-center  w-[20rem] h-[30rem] align-middle  ">
             <div className="flex justify-center">
             <img src="src\assets\img\Screenshot 2024-09-19 160732.png" className="w-[19rem] h-[10rem] justify-center"/>
             </div>
@@ -13,7 +13,7 @@ export const Myproject=()=>{
                 This application aims to provide users with an interactive and responsive platform for engaging in natural language conversations, offering assistance, 
                 information retrieval, and personalized responses based on user input.</p>
         </div>
-        <div className="flex flex-col justify-center  w-[22rem] h-[30rem] relative left-[16rem] top-[2rem] ">
+        <div className="flex flex-col justify-center  w-[22rem] h-[30rem] align-middle ">
             <div className="flex justify-center">
             <img src="src\assets\img\Screenshot 2024-09-19 160543.png" className="w-[19rem] h-[10rem] justify-center"/>
             </div>
