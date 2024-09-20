@@ -5,7 +5,7 @@ import { useState } from "react"
 import { User,Cross } from 'lucide-react';
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { Navigate } from 'react-router-dom';
-// import { Link, NavLink } from 'react-router-dom';
+
 const Nav=()=>{
     const nav=useNavigate()
   const NavLinks = [{
@@ -34,7 +34,7 @@ const [visi,setvisi]=useState(false)
     return(
         <>
         <div className='flex justify-center pt-3 sticky'>
-        <div className=" bg-gray-600 list-none flex   flex-row items-center gap-[3rem] h-[3rem] w-[100vw] rounded-md shadow-md shadow-gray-700">
+        <div className=" bg-gray-700 list-none flex   flex-row items-center gap-[3rem] h-[3rem] w-[100vw] rounded-md shadow-md shadow-gray-700">
             <div className=" flex text-center w-[30%] justify-end">
               <h1 className="text-gray-100 text-2xl">Nivash</h1>
             </div>
@@ -42,7 +42,7 @@ const [visi,setvisi]=useState(false)
             {
                                 NavLinks.map((navdata, index) => (
                                     <NavLink key={index} to={navdata.path}>
-                                     <button type="button" className=" h-[36px] w-[60px] block rounded-md text-gray-400">{navdata.title}</button>
+                                     <button type="button" className=" h-[36px] w-[60px] block rounded-md text-gray-500 font-bold ">{navdata.title}</button>
                                     </NavLink>
                                 ))
                             }
