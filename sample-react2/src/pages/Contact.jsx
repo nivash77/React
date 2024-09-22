@@ -1,5 +1,5 @@
 
-import { Nav } from "../components/NavBar"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
@@ -9,7 +9,6 @@ const Contact=()=>{
 
     return(
         <>
-        <Nav />
         <div className="flex flex-col  justify-center items-center h-[80vh] gap-[2rem]">
           <div className="flex flex-row gap-[2rem]">
         <FontAwesomeIcon icon={faLinkedin}  className="size-16"/>
