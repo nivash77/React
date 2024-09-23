@@ -1,4 +1,4 @@
-
+import { Tech } from "./Tech"
 const Img=()=>{
     return(
         <>
@@ -17,6 +17,7 @@ const Img=()=>{
             As a Student at Sri Shakthi Institute of Engineering and Technology. I am actively developing my skills related to software, web and java developer
             </p>
         </div>
+        <Tech/>
         </div>
         </div>
         </>

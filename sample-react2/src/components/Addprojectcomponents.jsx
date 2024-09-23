@@ -1,8 +1,9 @@
-import { Plus } from "lucide-react"
+import {Trash ,Check, Plus , MessageCircleWarning} from "lucide-react"
 import React,{ useRef, useState } from "react"
 import { addProject } from "../services/api"
 import { IoCloseCircleOutline } from "react-icons/io5";
-export const Addprojectcomponents=()=>{
+import { Toaster, toast } from 'sonner'
+export const Addprojectcomponents=({fetchprojects})=>{
     const titler=useRef(null)
     const descr=useRef(null)
     const linkr=useRef(null)
@@ -19,9 +20,18 @@ export const Addprojectcomponents=()=>{
             const res=await addProject(projectdata)
             if(res.status==201){
                 console.log("ADDED")
+                toast('Project Added', {
+                    className: 'bg-gradient-to-r from-green-500 to-lime-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
+                    icon: <Check />,
+                });
+                fetchprojects()
             }
         }catch(error){
-            console.log(error)
+            toast.log(error)
+            toast('Error', {
+                className: 'bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
+                icon: <MessageCircleWarning />,
+            });
         }
         setvisi(false)
 
