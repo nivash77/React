@@ -11,7 +11,7 @@ const Profile=()=>{
     <Img/>
     
     </div>
-   
+    
     </div>
     </>
   )

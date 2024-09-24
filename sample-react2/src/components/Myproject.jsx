@@ -1,8 +1,14 @@
 import { Pencil, Trash,Check } from "lucide-react"
 import { Toaster, toast } from 'sonner'
-import React from "react"
+import React,{useState} from "react"
 import { deleteProject } from "../services/api"
 export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
+    // const [login_user,setvisible]=useState(false);
+    // const admin_user=localStorage.getItem('admin')
+    // if(admin_user==='nivash_07'){
+    //     ()=>setvisible(true)
+    // }
+    const[admin_user,setadmin_user]=useState(localStorage.getItem('admin'))
     const handledelete=async()=>{
         try{
             const res=await deleteProject(id)
@@ -31,7 +37,7 @@ export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
                     {desc}
                 </p>
                 <div className="w-full h-[10%] flex flex-row justify-end items-end gap-2 ">
-                  
+                 {admin_user==='nivash_07' &&(
                     <button
                         className="flex justify-center items-center gap-2 w-16 h-10 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#fb7185] via-[#e11d48] to-[#be123c] hover:shadow-sm hover:shadow-red-100  hover:from-[#be123c] hover:to-[#fb7185]"
                         onClick={handledelete} >
@@ -52,11 +58,41 @@ export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
                             Button
                         </svg>
                     </button>
+                    )}   
 
                     <p className="text-gray-400 text-3xl">{parseInt(pid, 10) + 1}</p>
                 </div>
             </div>
+            
         </>
     )
 
 }
+
+
+{/* <>
+<div className="flex flex-row gap-[3rem] w-">
+<div className="flex flex-col justify-center  w-[20rem] h-[30rem] relative left-[15rem] top-[2rem] ">
+   <div className="flex justify-center">
+   <img src="src\assets\img\Screenshot 2024-09-19 160732.png" className="w-[19rem] h-[10rem] justify-center"/>
+   </div>
+   <div className="flex flex-col justify-center items-center">
+   <h2 className="p-2 font-bold font-serif">AI CHAT</h2>
+   </div>
+   <p className="font-serif"> The objective of this project is to develop a chat AI web application that leverages the capabilities of Gemini AI, integrated with the Streamlit framework. 
+       This application aims to provide users with an interactive and responsive platform for engaging in natural language conversations, offering assistance, 
+       information retrieval, and personalized responses based on user input.</p>
+</div>
+<div className="flex flex-col justify-center  w-[22rem] h-[30rem] relative left-[16rem] top-[2rem] ">
+   <div className="flex justify-center">
+   <img src="src\assets\img\Screenshot 2024-09-19 160543.png" className="w-[19rem] h-[10rem] justify-center"/>
+   </div>
+   <div className="flex flex-col justify-center items-center">
+   <h2 className="p-2 font-bold font-serif">IMAGE GENERATING</h2>
+   </div>
+   <p className="font-serif"> The goal of this project is to develop an image-generating web application that transforms textual descriptions into visual representations.
+        By leveraging advanced AI models take the ai model from online website of Open source and modify it, the application will allow users to input prompts and receive generated images that accurately 
+        reflect their descriptions and integrated with the Streamlit framework.</p>
+</div>
+</div>
+</> */}

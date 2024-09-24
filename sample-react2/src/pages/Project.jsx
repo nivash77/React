@@ -6,6 +6,7 @@ import {Addprojectcomponents} from "../components/Addprojectcomponents"
 
 const Project = () => {
   const [projectdata, setProjectdata] = useState(null)
+  const[admin_user,setvisible]=useState(localStorage.getItem('admin'))
   const fetchprojects = async () => {
     // const {}
     try {
@@ -25,7 +26,12 @@ const Project = () => {
     return (
     <>
     <div className="w-full h-[10%] flex justify-center items-center">
+      {
+        admin_user==='nivash_07' &&(
+
           <Addprojectcomponents/>
+        )
+      }
         </div>
     </>
     )
@@ -34,9 +40,15 @@ const Project = () => {
   return (
     <>
       <div className="w-full h-full flex flex-row flex-wrap gap-8 justify-center items-center pb-8">
-        <div className="w-full h-[10%] flex justify-center items-center">
+        {
+          admin_user==='nivash_07' &&(
+          <div className="w-full h-[10%] flex justify-center items-center">
+
           <Addprojectcomponents  fetchprojects={fetchprojects}/>
-        </div>
+          </div>
+         
+        )
+      }
 
         {
           projectdata.map((data, index) => (

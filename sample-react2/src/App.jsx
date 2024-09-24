@@ -8,14 +8,15 @@ import { Contact } from './pages/Contact'
 import { Skills } from './pages/Skills'
 // import { Route } from 'lucide-react'
 const App=()=>{
+  const [login_user,setvisible]=useState(false);
   return(
     <>
    <BrowserRouter>
-    <Nav/>
+    <Nav  login_use={login_user} />
    <Routes>
-   <Route path="/" element={<Profile />} />
+   <Route path="/" element={<Profile/>} />
    <Route path='/Skills' element={<Skills/>}/>
-   <Route path="/Project" element={<Project />} />
+   <Route path="/Project" element={<Project  login_use={login_user}/>} />
 
    <Route path="/Contact" element={<Contact/>} />
    </Routes>
