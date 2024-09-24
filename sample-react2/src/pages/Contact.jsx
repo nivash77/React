@@ -13,10 +13,10 @@ const Contact=()=>{
         <div className="flex flex-col  justify-center items-center h-[80vh] gap-[2rem]">
           <div className="flex flex-row gap-[2rem]">
        <a href={"https://www.linkedin.com/in/nivash-m-2k4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"} target='_blank'><FontAwesomeIcon icon={faLinkedin}  className="size-16"/></a>
-        <IoMdMail className="size-16"/>
+       <a href={"mailto:nivashmareesh07@gmail.com"}><IoMdMail className="size-16"/></a>
         </div>
         <div className="flex flex-row gap-[2rem]">
-        <FaPhone className="size-16" />
+        <a href={"tel:+91 "}><FaPhone className="size-16" /></a>
        <a href={gitlink} target='_blank'> <FaGithub className="size-16"/></a>
         </div>
         </div>
